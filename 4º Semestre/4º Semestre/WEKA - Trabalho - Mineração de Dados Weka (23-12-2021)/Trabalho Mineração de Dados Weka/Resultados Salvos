@@ -1,0 +1,92 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Cancer
+Instances:    286
+Attributes:   10
+              recorrencia
+               idade
+               menopausa
+               tamanho_tumor
+               inv-nodes
+               node-caps
+              deg-malig
+               mama
+               peito-quadril
+               irradiar
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ inv-nodes = 0-2: no (213.0/30.0)
+ inv-nodes = 6-8
+|    tamanho_tumor = 30-34: no (7.0/1.0)
+|    tamanho_tumor = 20-24: yes (1.0)
+|    tamanho_tumor = 15-19: yes (1.0)
+|    tamanho_tumor = 0-4: yes (0.0)
+|    tamanho_tumor = 25-29: yes (3.0)
+|    tamanho_tumor = 50-54: yes (0.0)
+|    tamanho_tumor = 10-14: yes (1.0)
+|    tamanho_tumor = 40-44: yes (2.0)
+|    tamanho_tumor = 35-39: no (1.0)
+|    tamanho_tumor = 5-9: yes (0.0)
+|    tamanho_tumor = 45-49: no (1.0)
+ inv-nodes = 9-11: yes (10.0/3.0)
+ inv-nodes = 3-5
+|    tamanho_tumor = 30-34: no (10.0/3.0)
+|    tamanho_tumor = 20-24
+|   |   recorrencia = no-recurrence-events: no (6.0/1.0)
+|   |   recorrencia = recurrence-events: yes (6.0/2.0)
+|    tamanho_tumor = 15-19: no (0.0)
+|    tamanho_tumor = 0-4: no (0.0)
+|    tamanho_tumor = 25-29: yes (8.0/2.0)
+|    tamanho_tumor = 50-54: no (0.0)
+|    tamanho_tumor = 10-14: no (1.0)
+|    tamanho_tumor = 40-44
+|   |    peito-quadril = left_low: no (2.0)
+|   |    peito-quadril = right_up: yes (1.0)
+|   |    peito-quadril = left_up: yes (2.0)
+|   |    peito-quadril = right_low: yes (0.0)
+|   |    peito-quadril = central: yes (0.0)
+|    tamanho_tumor = 35-39: no (0.0)
+|    tamanho_tumor = 5-9: no (0.0)
+|    tamanho_tumor = 45-49: no (0.0)
+ inv-nodes = 15-17: no (6.0/1.0)
+ inv-nodes = 12-14: yes (3.0)
+ inv-nodes = 24-26: yes (1.0)
+
+Number of Leaves  : 	32
+
+Size of the tree : 	37
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         217               75.8741 %
+Incorrectly Classified Instances        69               24.1259 %
+Kappa statistic                          0.201 
+Mean absolute error                      0.3041
+Root mean squared error                  0.4167
+Relative absolute error                 83.6574 %
+Root relative squared error             97.8831 %
+Total Number of Instances              286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,917    0,750    0,797      0,917    0,853      0,217    0,628     0,798     no
+                 0,250    0,083    0,486      0,250    0,330      0,217    0,628     0,446     yes
+Weighted Avg.    0,759    0,591    0,723      0,759    0,729      0,217    0,628     0,714     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 200  18 |   a = no
+  51  17 |   b = yes
+
